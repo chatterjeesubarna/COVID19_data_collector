@@ -118,7 +118,7 @@ def parse_arguments(url_common):
 		print("country = ", country)
 		print("current_datetime = ", datetime)
 
-	file = open(country + "_corona_stats" + ".csv", "w+")
+	file = open(country + "_corona_stats" + ".csv", "a")
 	if counter_arg == 1 :
 		file.write("date_time, country, total_cases, new_cases, total_deaths, new_deaths, total_recs, new_recs, active_cases, critical_cases, cases_per_M_pop \n")
 	url = url_common #+ country
