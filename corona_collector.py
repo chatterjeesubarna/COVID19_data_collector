@@ -3,6 +3,7 @@ import urllib.request
 import time
 from bs4 import BeautifulSoup
 import re 
+import os
 import argparse
 from datetime import date
 from datetime import datetime
@@ -118,9 +119,10 @@ def parse_arguments(url_common):
 		print("country = ", country)
 		print("current_datetime = ", datetime)
 
+	filename = country + "_corona_stats" + ".csv"
 	file = open(country + "_corona_stats" + ".csv", "a")
-	if counter_arg == 1 :
-		file.write("date_time, country, total_cases, new_cases, total_deaths, new_deaths, total_recs, new_recs, active_cases, critical_cases, cases_per_M_pop \n")
+	if counter_arg == 1 and os.stat(filename).st_size == 0 :
+		file.write("date_time, country, total_cases, new_cases, total_deaths, new_deaths, total_recs, active_cases, critical_cases, cases_per_M_pop \n")
 	url = url_common #+ country
 	get_virus_spread_info(url, country, file, date_time, verbose)
 	file.close()
