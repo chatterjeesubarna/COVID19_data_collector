@@ -9,4 +9,4 @@ make
 
 This will run the data collection program that collects data for each country (right now, it is only for USA, but you can change it inside run.sh) after every 30 seconds (also modifiable) until you terminate. 
 
-You can check the results inside COVID19_data_collector/results.
+The entire data is collected within COVID19_data_collector/USA_corona_stats.csv. You can also check the results inside COVID19_data_collector/results. Currently, we only plot the rise of new cases over time, but hope to include other metrics soon.
