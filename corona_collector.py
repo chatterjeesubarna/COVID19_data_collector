@@ -96,12 +96,14 @@ def parse_arguments(url_common):
 
 	parser.add_argument("-c", "--country", type=str, default="USA")
 	parser.add_argument("-v", "--verbose", type=int, default=0)
+	parser.add_argument("-x", "--counter_arg", type=int, default=0)
 	# parser.add_argument("-s", "--start_date", type=str, default=current_date)
 	# parser.add_argument("-e", "--end_date", type=str, default=current_date)
 
 	args = parser.parse_args()
 	country = args.country
 	verbose = args.verbose
+	counter_arg = args.counter_arg
 
 	if verbose == 1 :
 		print("Parsing complete !!!")
@@ -113,7 +115,8 @@ def parse_arguments(url_common):
 		print("current_datetime = ", datetime)
 
 	file = open(country + "_corona_stats" + ".csv", "w+")
-	file.write("date_time, country, total_cases, new_cases, total_deaths, new_deaths, total_recs, new_recs, active_cases, critical_cases, cases_per_M_pop \n")
+	if counter_arg == 1 :
+		file.write("date_time, country, total_cases, new_cases, total_deaths, new_deaths, total_recs, new_recs, active_cases, critical_cases, cases_per_M_pop \n")
 	url = url_common #+ country
 	get_virus_spread_info(url, country, file, date_time, verbose)
 	file.close()
