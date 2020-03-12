@@ -1,10 +1,10 @@
 
-base_dir = "/Users/subarnachatterjee/Dropbox/COVID19_data_collector/results"
+base_dir = "/Users/subarnachatterjee/Dropbox/COVID19_data_collector/"
 data <- read.delim(file = paste(base_dir, "/USA_corona_stats.csv", sep=""), head = TRUE, sep = ",")
 plot_colors <- c("red","blue","black","green")
 
 setEPS()
-postscript(paste(base_dir, "/result.eps", sep=""), family="Times", width=5.5, height=5)
+postscript(paste(base_dir, "results/result.eps", sep=""), family="Times", width=5.5, height=5)
 
 x <- data$date_time
 y1 <- data$new_cases
