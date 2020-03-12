@@ -48,10 +48,14 @@ def get_virus_spread_info(url, country, file, date_time, verbose) :
 				# print(row_text.replace(' ', ''), end = ',\t')
 				# print("if country: " + country + " j: " + str(j))
 				file.write(row_text.replace(' ', '') + ',\t')
+				if verbose > 1 :
+					print(row_text.replace(' ', ''), end = ',\t')
 			else : 
 				# print(row_text.replace(' ', ''), end = '\n')
 				# print("else country: " + country + " j: " + str(j))
 				file.write(row_text.replace(' ', '') + "\n")
+				if verbose > 1 :
+					print(row_text.replace(' ', '') + "\n")
 				country_flag = 0
 			
 		# if country == "All" and j%row_size != row_size-1 :
