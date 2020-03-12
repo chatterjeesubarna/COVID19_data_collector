@@ -5,9 +5,9 @@ end_after=86400
 counter_arg=0
 while true  
 do  
-  echo "hello"	
   counter_arg=$((counter_arg+1))
-  echo $counter_arg
+  command="python3 corona_collector.py -x $counter_arg -c USA"
+  #echo $command
   python3 corona_collector.py -x $counter_arg -c USA		
   sleep $sleep_duration  
 done	
