@@ -4,7 +4,7 @@ This repository is intended for real-time collection of data concerning COVID-19
 
 To use the repository simply you need to install python3. Then, clone the repository and run the following:
 
-cd COVID19_data_collector
+cd COVID19_data_collector<br/>
 make
 
 This will run the data collection program that collects data for each country (right now, it is only for USA, but you can change it inside run.sh) after every 30 seconds (also modifiable) until you terminate. 
