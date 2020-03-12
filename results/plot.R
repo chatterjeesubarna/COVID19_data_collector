@@ -40,7 +40,7 @@ axis(2, at=c(min_y, max_y), cex.axis=0.5, mgp=c(0, 0.75, 0))
 
 box()
 title(xlab=expression('Timestamp'), cex.lab=1.5, mgp=c(3, 0, 0))
-title(ylab="Corona cases", cex.lab=1.5, mgp=c(3.75, 0, 0))
+title(ylab="New corona cases", cex.lab=1.5, mgp=c(3.75, 0, 0))
 #mtext(expression("(x"~10^12~")"), line = 0, side=1, at=4, cex=1.25, font=5)
 
 #dev.off()
