@@ -1,8 +1,9 @@
 #!/bin/sh  
 
 absolute_path=$(PWD)
+m_absolute_path="$absolute_path/"
 result_path="$absolute_path/results" 
-echo $result_path
+#echo $absolute_path
 
 sleep_duration=30
 end_after=86400
@@ -18,8 +19,7 @@ do
   sleep 2
 
   cd $result_path 
-  ls
-  Rscript plot.R
+  Rscript plot.R $m_absolute_path
   echo "plotting done! Check results at $result_path"
   cd ..	
   sleep $sleep_duration 

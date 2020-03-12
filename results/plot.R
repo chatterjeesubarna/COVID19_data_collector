@@ -1,5 +1,7 @@
 
-base_dir = "/Users/subarnachatterjee/Dropbox/COVID19_data_collector/"
+args <- commandArgs(trailingOnly = TRUE)
+base_dir = args[1]
+#base_dir = "/Users/subarnachatterjee/Dropbox/COVID19_data_collector/"
 data <- read.delim(file = paste(base_dir, "/USA_corona_stats.csv", sep=""), head = TRUE, sep = ",")
 plot_colors <- c("red","blue","black","green")
 
@@ -28,8 +30,8 @@ x_max=as.character(x[x_max_lab])
 # }
 # y1[1] = 0
 
-plot(x, y2, type="o", pch = 4, cex=1.3, lty=1, col="black", ylim=c(min_y, max_y), xlim=c(x_min_lab,x_max_lab), axes=FALSE, ann=FALSE)
-lines(x, y1, type="o", pch = 4, cex=1.3, lty=1, col="black")
+plot(x, y2, type="o", pch = 22, cex=0.3, lty=1, col="black", ylim=c(min_y, max_y), xlim=c(x_min_lab,x_max_lab), axes=FALSE, ann=FALSE)
+lines(x, y1, type="o", pch = 22, cex=0.3, lty=1, col="black")
 
 
 axis(1, at=c(x_min_lab,x_max_lab), label=c(x_min, x_max), cex.axis=0.5, mgp=c(0, 1.25, 0))
@@ -41,4 +43,4 @@ title(xlab=expression('Timestamp'), cex.lab=1.5, mgp=c(3, 0, 0))
 title(ylab="Corona cases", cex.lab=1.5, mgp=c(3.75, 0, 0))
 #mtext(expression("(x"~10^12~")"), line = 0, side=1, at=4, cex=1.25, font=5)
 
-dev.off()
+#dev.off()
