@@ -8,6 +8,8 @@ import argparse
 from datetime import date
 from datetime import datetime
 
+country_global = 1573
+
 def get_virus_spread_info(url, country, file, date_time, verbose) :
 
 	if verbose == 1 :
