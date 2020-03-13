@@ -5,7 +5,7 @@ m_absolute_path="$absolute_path/"
 result_path="$absolute_path/results" 
 #echo $absolute_path
 
-sleep_duration=30
+sleep_duration=300
 end_after=86400
 counter_arg=0
 while true  

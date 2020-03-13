@@ -30,8 +30,8 @@ x_max=as.character(x[x_max_lab])
 # }
 # y1[1] = 0
 
-plot(x, y2, type="o", pch = 22, cex=0.3, lty=1, col="black", ylim=c(min_y, max_y), xlim=c(x_min_lab,x_max_lab), axes=FALSE, ann=FALSE)
-lines(x, y1, type="o", pch = 22, cex=0.3, lty=1, col="black")
+plot(x, y2, type="o", pch = NA_integer_, cex=0.3, lty=1, col="black", ylim=c(min_y, max_y), xlim=c(x_min_lab,x_max_lab), axes=FALSE, ann=FALSE)
+lines(x, y1, type="o", pch = NA_integer_, cex=0.3, lty=1, col="black")
 
 
 axis(1, at=c(x_min_lab,x_max_lab), label=c(x_min, x_max), cex.axis=0.5, mgp=c(0, 1.25, 0))
