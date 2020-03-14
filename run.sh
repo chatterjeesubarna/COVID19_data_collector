@@ -1,6 +1,6 @@
 #!/bin/sh  
 
-absolute_path=$(PWD)
+absolute_path=$(pwd)
 m_absolute_path="$absolute_path/"
 result_path="$absolute_path/results" 
 #echo $absolute_path
@@ -11,7 +11,7 @@ counter_arg=0
 while true  
 do  
   now=$(date)
-  echo "\n******* Collecting data for COVID-19 at $now ******* "
+  echo "******** Collecting data for COVID-19 at $now ******* "
 
   counter_arg=$((counter_arg+1))
   #command="python3 corona_collector.py -x $counter_arg -c USA"
